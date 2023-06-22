@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formula/seven.dart';
+import 'splashscreen.dart';
 main(){
   runApp(
       MaterialApp(
