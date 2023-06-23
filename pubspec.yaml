@@ -60,6 +60,11 @@ flutter:
   uses-material-design: true
   assets:
     - assets/f4.png
+    - assets/formula2.png
+    - assets/f2.png
+
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
