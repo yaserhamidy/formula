@@ -17,7 +17,22 @@ class _sevenState extends State<seven> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(title: Text("صنف هفتم",style: TextStyle(fontSize: 20),),),
+
+      body: Column(
+        children: [
+          Container(
+            height: 300,
+
+                color: Color(0xFFF5CE88),
+
+            
+
+          ),
+
+        ]
+    )
+
     );
+
   }
 }

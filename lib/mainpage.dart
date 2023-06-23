@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:formula/aboutpage.dart';
 import 'package:formula/seven.dart';
 import 'splashscreen.dart';
 main(){
@@ -21,6 +22,32 @@ class _mainpageState extends State<mainpage> {
   Widget build(BuildContext context) {
     return Scaffold(
 
+       drawer: Drawer(),
+      appBar: AppBar(backgroundColor: Color(0xFFF5CE88),elevation: 0.0,
+      actions: <Widget>[
+        PopupMenuButton<String>(
+          onSelected: (String value) {
+            switch (value) {
+              case 'Logout':
+                break;
+              case 'about':
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const about()),
+                );
+            }
+          },
+          itemBuilder: (BuildContext context) {
+            return {'Logout', 'about','exit'}.map((String choice) {
+              return PopupMenuItem<String>(
+                value: choice,
+                child: Text(choice),
+              );
+            }).toList();
+          },
+        ),
+      ],
+      ),
       body: Stack(
 
         children: [
@@ -35,12 +62,7 @@ class _mainpageState extends State<mainpage> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                Align(
-                    alignment: Alignment.topRight,
 
-                    child: IconButton(
-                        onPressed: () {}, icon: Icon(Icons.dehaze_outlined))
-                ),
                 Align(
                     alignment: Alignment.topRight,
 
