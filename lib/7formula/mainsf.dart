@@ -17,7 +17,9 @@ class _fs1State extends State<fs1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("فرمول های ریاضی"),
+      ),
     );
   }
 }
