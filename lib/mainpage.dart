@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:formula/aboutpage.dart';
 import 'package:formula/apptips.dart';
+import 'package:formula/eightclass.dart';
+import 'package:formula/elevenclass.dart';
+import 'package:formula/favoritepage.dart';
+import 'package:formula/nineclass.dart';
 import 'package:formula/settings.dart';
 import 'package:formula/seven.dart';
+import 'package:formula/tenclass.dart';
+import 'package:formula/twelveclass.dart';
 import 'splashscreen.dart';
 
 main() {
@@ -34,15 +40,32 @@ class _mainpageState extends State<mainpage> {
           });
       },
         currentIndex: myIndex,
+
         items: [
         BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home",backgroundColor: Colors.orange),
+            label: "Home",backgroundColor: Colors.orange,
+          activeIcon: IconButton(onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const mainpage()),
+            );
+          }, icon: Icon(Icons.home))
+        ),
 
         BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: "favorite",backgroundColor: Colors.amber,
+            activeIcon: IconButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const favorite()),
+              );
+            }, icon: Icon(Icons.favorite))
+
         )
+
+
 
 
       ],),
@@ -251,7 +274,7 @@ class _mainpageState extends State<mainpage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const seven()),
+                                builder: (context) => const eight()),
                           );
                         },
                       ),
@@ -294,7 +317,7 @@ class _mainpageState extends State<mainpage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const seven()),
+                                builder: (context) => const nine()),
                           );
                         },
                       ),
@@ -337,7 +360,7 @@ class _mainpageState extends State<mainpage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const seven()),
+                                builder: (context) => const ten()),
                           );
                         },
                       ),
@@ -380,7 +403,7 @@ class _mainpageState extends State<mainpage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const seven()),
+                                builder: (context) => const eleven()),
                           );
                         },
                       ),
@@ -423,7 +446,7 @@ class _mainpageState extends State<mainpage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const seven()),
+                                builder: (context) => const twelve()),
                           );
                         },
                       ),

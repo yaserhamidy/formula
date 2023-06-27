@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:formula/7formula/mainsf.dart';
-import 'package:formula/7formula/mainsf.dart';
+import 'package:formula/7formula/main7f.dart';
+import 'package:formula/7formula/main7f.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 main() {
   runApp(MaterialApp(
@@ -54,8 +55,11 @@ class _sevenState extends State<seven> {
                               fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
+
                         ),
+
                       ],
+
                     ),
                   ),
                   decoration: BoxDecoration(
@@ -77,63 +81,97 @@ class _sevenState extends State<seven> {
             SizedBox(
               height: 20,
             ),
-            Container(
-                height: 50,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "فیزیک",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontStyle: FontStyle.italic,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
+            GestureDetector(
+              child: Container(
+                  height: 50,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                         Text(
+                            "فیزیک",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+
+                      ],
+                    ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Colors.yellow,
-                    Colors.black,
-                    Colors.yellowAccent
-                  ]),
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                )),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.yellow,
+                      Colors.black,
+                      Colors.yellowAccent
+                    ]),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                  )),
+              onTap: (){
+                Fluttertoast.showToast(
+                  msg: "به ویرژن بعدی فعال میشود",
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.CENTER,
+                  timeInSecForIosWeb: 5,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white,
+                  fontSize: 16.0
+              );
+                setState(() {
+
+                });
+                },
+            ),
+
             SizedBox(
               height: 20,
             ),
-            Container(
-                height: 50,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "کیمیا",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontStyle: FontStyle.italic,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
+            GestureDetector(
+              child: Container(
+                  height: 50,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "کیمیا",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Colors.yellow,
-                    Colors.black,
-                    Colors.yellowAccent
-                  ]),
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                )),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                      Colors.yellow,
+                      Colors.black,
+                      Colors.yellowAccent
+                    ]),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white,
+                  )),
+              onTap: (){
+                Fluttertoast.showToast(
+                    msg: "به ویرژن بعدی فعال میشود",
+                    toastLength: Toast.LENGTH_SHORT,
+                    gravity: ToastGravity.CENTER,
+                    timeInSecForIosWeb: 5,
+                    backgroundColor: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16.0
+                );
+                setState(() {
+
+                });
+              },
+            ),
           ],
         ),
       ),

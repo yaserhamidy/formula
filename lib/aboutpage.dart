@@ -61,7 +61,7 @@ class about extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Align(
           alignment: Alignment.topRight,
-          child: Text("درجه تحصیل:صنف دهم و محصل دوره آموزشیcode4fun در موسسه wassa"
+          child: Text("متعلم صنف دهم "
 
             ,style: TextStyle(fontSize: 20,),),
         ),
