@@ -39,8 +39,8 @@ class _mainpageState extends State<mainpage> {
         color: Colors.orange,
         animationDuration: Duration(milliseconds: 300),
         items: <Widget>[
-          Icon(Icons.home, size: 30,color: Colors.grey,),
-          Icon(Icons.favorite, size: 30,color: Colors.grey,),
+          Icon(Icons.home, size: 30,color: Colors.white,),
+          Icon(Icons.favorite, size: 30,color: Colors.white,),
 
         ],
         onTap: (index) {
