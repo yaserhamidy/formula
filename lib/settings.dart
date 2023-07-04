@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:settings_ui/settings_ui.dart';
 main(){
   runApp(
     MaterialApp(
@@ -27,9 +28,33 @@ class _SettingsState extends State<Settings> {
 
         child: Center(
           child: Container(
-            child :Text(
-          '''up to now there is no option that the user can control,   
-           maybe we will have some options in the next versions''',style: TextStyle(color: Colors.white,fontSize: 25),),
+            child :SettingsList(
+              sections: [
+                SettingsSection(
+                  title: Text('Common'),
+                  tiles: <SettingsTile>[
+                    SettingsTile.navigation(
+                      leading: Icon(Icons.language),
+                      title: Text('Language'),
+                      value: Text('English'),
+                    ),
+                    SettingsTile.switchTile(
+                      onToggle: (value) {},
+                      initialValue: true,
+                      leading: Icon(Icons.format_paint),
+                      title: Text('Enable custom theme'),
+                    ),
+                    SettingsTile.navigation(
+                      leading: Icon(Icons.location_city),
+                        title: Text("AFG")
+
+                    )
+                  ],
+
+                ),
+
+              ],
+            ),
           ),
         ),
       ),

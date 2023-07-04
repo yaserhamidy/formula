@@ -10,6 +10,9 @@ import 'package:formula/seven.dart';
 import 'package:formula/tenclass.dart';
 import 'package:formula/twelveclass.dart';
 import 'splashscreen.dart';
+import 'package:settings_ui/settings_ui.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+
 
 main() {
   runApp(MaterialApp(
@@ -30,45 +33,24 @@ class _mainpageState extends State<mainpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.shifting,
-        onTap: (index){
-          setState(() {
+      bottomNavigationBar: CurvedNavigationBar(
+        height: 60,
+        backgroundColor: Colors.white,
+        color: Colors.orange,
+        animationDuration: Duration(milliseconds: 300),
+        items: <Widget>[
+          Icon(Icons.home, size: 30,color: Colors.grey,),
+          Icon(Icons.favorite, size: 30,color: Colors.grey,),
 
-
-          myIndex = index;
-          });
-      },
-        currentIndex: myIndex,
-
-        items: [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",backgroundColor: Colors.orange,
-          activeIcon: IconButton(onPressed: (){
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const mainpage()),
-            );
-          }, icon: Icon(Icons.home))
-        ),
-
-        BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "favorite",backgroundColor: Colors.amber,
-            activeIcon: IconButton(onPressed: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const favorite()),
-              );
-            }, icon: Icon(Icons.favorite))
-
-        )
+        ],
+        onTap: (index) {
+        },
+      ),
 
 
 
 
-      ],),
+
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -120,7 +102,7 @@ class _mainpageState extends State<mainpage> {
     onTap: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const Apptips()),
+        MaterialPageRoute(builder: (context) =>  Apptips()),
       );
     }
       ),
