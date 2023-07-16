@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-main(){
-  runApp(
-      MaterialApp(
-        theme: ThemeData.dark(),
-        home: Apptips(),
-      )
-  );
+
+main() {
+  runApp(MaterialApp(
+    theme: ThemeData.dark(),
+    home: Apptips(),
+  ));
 }
+
 class Apptips extends StatefulWidget {
   const Apptips({super.key});
 
@@ -18,14 +18,52 @@ class _ApptipsState extends State<Apptips> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blue,title: Text("App tips",style: TextStyle(fontSize: 20),),),
+      appBar: AppBar(
+        backgroundColor: Color(0xff003B73),
+        title: Text(
+          "App tips",
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
       body: Container(
-        color: Colors.white,
-        child: Align(
-          alignment: Alignment.center,
-          child: Text(
-              '''این برنامه جهت رهنمایی شاگردان صنوف هفتم تا دوازدهم برای درک 
-                وفهم بهتر فرمول های مضامین ریاضی,فیزیک و کیمیا ساخته شده است. ''',style: TextStyle(fontSize: 20),),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color(0xff0074B7),
+            Color(0xFFBFD7ED),
+          ]),
+        ),
+        child: Column(
+          children: [
+            SizedBox(height: 40,),
+            Text(
+              "Information about app",
+              style: TextStyle(color: Colors.white, fontSize: 40,fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 50,),
+
+              Row(
+
+                children: [
+                  SizedBox(height: 40,),
+                  Icon(
+                    Icons.tips_and_updates,
+                    color: Color(0xFFBFD7ED),
+                    size: 33,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+
+                  Expanded(
+                    child: Text(
+                      "this application is for the students are from seventh to twelfth grade in school that they can solve their problem adout some subject ",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                ],
+              ),
+
+          ],
         ),
       ),
     );

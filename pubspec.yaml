@@ -34,10 +34,12 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+
   fluttertoast: ^8.2.2
   settings_ui: ^2.0.2
   curved_navigation_bar: ^1.0.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.0
 
 
 
@@ -66,6 +68,12 @@ flutter:
     - assets/formula2.png
     - assets/f2.png
     - assets/IMG_2586.JPG
+    - assets/fo2.jpg
+    - assets/a2b2c2.jpg
+    - assets/ss.jpg
+
+
+
 
 
 

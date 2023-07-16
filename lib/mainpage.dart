@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:formula/aboutpage.dart';
 import 'package:formula/apptips.dart';
@@ -34,13 +36,13 @@ class _mainpageState extends State<mainpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        height: 60,
+        height: 50,
         backgroundColor: Colors.white,
-        color: Colors.orange,
+        color: Color(0xff003B73),
         animationDuration: Duration(milliseconds: 300),
         items: <Widget>[
-          Icon(Icons.home, size: 30,color: Colors.white,),
-          Icon(Icons.favorite, size: 30,color: Colors.white,),
+          Icon(Icons.home, size: 30,color: Color(0xFFBFD7ED),),
+          Icon(Icons.favorite, size: 30,color: Color(0xFFBFD7ED),),
 
         ],
         onTap: (index) {
@@ -51,87 +53,81 @@ class _mainpageState extends State<mainpage> {
 
 
 
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
+      drawer: Container(
+        color: Color(0xff0074B7),
+        child: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
 
-        decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          Colors.yellowAccent,
-          Colors.black
-        ])
-        ),
-              child: Text(
-                '''
-                موثر 
-                ترین 
-                فرمول ها''',
-                style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.black,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.bold),
-              )
-        ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: const Text('Settings',style: TextStyle(fontSize: 20),),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Settings()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.person),
-              title: const Text('About',style: TextStyle(fontSize: 20),),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const about()),
-                );
 
-              },
-            ),
-      ListTile(
-          leading: Icon(Icons.tips_and_updates),
-      title: const Text('App tips',style: TextStyle(fontSize: 20),),
+                child:  Container(
+          child: Image.asset("assets/f2.png"),),
+          ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: const Text('Settings',style: TextStyle(fontSize: 20),),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Settings()),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                title: const Text('About',style: TextStyle(fontSize: 20),),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const about()),
+                  );
+
+                },
+              ),
+        ListTile(
+            leading: Icon(Icons.tips_and_updates),
+        title: const Text('App tips',style: TextStyle(fontSize: 20),),
     onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) =>  Apptips()),
-      );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) =>  Apptips()),
+        );
     }
-      ),
-      ListTile(
-        leading: Icon(Icons.exit_to_app),
-        title: const Text('exit',style: TextStyle(fontSize: 20),),
+        ),
+        ListTile(
+          leading: Icon(Icons.exit_to_app),
+          title: const Text('exit',style: TextStyle(fontSize: 20),),
+          onTap: (){
+            Navigator.pop(context);
+          },
 
-      ),
-          ],
+        ),
+            ],
+          ),
         ),
       ),
       appBar: AppBar(
-        backgroundColor: Color(0xFFF5CE88),
+        backgroundColor: Color(0xff003B73),
         elevation: 0.0,
         actions: <Widget>[
           PopupMenuButton<String>(
             onSelected: (String value) {
               switch (value) {
-                case 'Logout':
-                  break;
+
                 case 'about':
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const about()),
                   );
+                case 'exit':
+                  Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) {
-              return {'Logout', 'about', 'exit'}.map((String choice) {
+              return { 'about', 'exit'}.map((String choice) {
                 return PopupMenuItem<String>(
                   value: choice,
                   child: Text(choice),
@@ -148,7 +144,7 @@ class _mainpageState extends State<mainpage> {
           ),
           Container(
             height: 300,
-            decoration: BoxDecoration(color: Color(0xFFF5CE88)),
+            decoration: BoxDecoration(color: Color(0xFF0074B7)),
           ),
           SafeArea(
               child: Padding(
@@ -164,7 +160,7 @@ class _mainpageState extends State<mainpage> {
                 فرمول ها''',
                       style: TextStyle(
                           fontSize: 18,
-                          color: Colors.black,
+                          color: Colors.white,
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.bold),
                     )),
@@ -185,11 +181,15 @@ class _mainpageState extends State<mainpage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text(
-                                  "صنف هفتم",
-                                  style: TextStyle(fontSize: 20),
+                                SizedBox(width: 10,),
+                                Text("صنف هفتم",style: TextStyle(fontSize: 20),),
+                                SizedBox(width: 15,),
+                                CircleAvatar(
+                                  backgroundColor: Color(0xFF0074B7),
+                                  child: Text("#7"),
                                 ),
-                                Icon(Icons.menu_book)
+
+
                               ],
                             ),
                           ),
@@ -228,11 +228,13 @@ class _mainpageState extends State<mainpage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text(
-                                  "صنف هشتم",
-                                  style: TextStyle(fontSize: 20),
+                                SizedBox(width: 10,),
+                                Text("صنف هشتم",style: TextStyle(fontSize: 20),),
+                                SizedBox(width: 15,),
+                                CircleAvatar(
+                                  backgroundColor: Color(0xFF0074B7),
+                                  child: Text("#8"),
                                 ),
-                                Icon(Icons.menu_book)
                               ],
                             ),
                           ),
@@ -271,11 +273,14 @@ class _mainpageState extends State<mainpage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text(
-                                  "صنف نهم",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                Icon(Icons.menu_book)
+
+                              SizedBox(width: 10,),
+                            Text("صنف نهم",style: TextStyle(fontSize: 20),),
+                            SizedBox(width: 15,),
+                            CircleAvatar(
+                              backgroundColor: Color(0xFF0074B7),
+                              child: Text("#9"),
+                            ),
                               ],
                             ),
                           ),
@@ -314,11 +319,13 @@ class _mainpageState extends State<mainpage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text(
-                                  "صنف دهم",
-                                  style: TextStyle(fontSize: 20),
+                                SizedBox(width: 10,),
+                                Text("صنف دهم",style: TextStyle(fontSize: 20),),
+                                SizedBox(width: 15,),
+                                CircleAvatar(
+                                  backgroundColor: Color(0xFF0074B7),
+                                  child: Text("#10"),
                                 ),
-                                Icon(Icons.menu_book)
                               ],
                             ),
                           ),
@@ -357,11 +364,13 @@ class _mainpageState extends State<mainpage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text(
-                                  "صنف یازدهم",
-                                  style: TextStyle(fontSize: 20),
+                                SizedBox(width: 10,),
+                                Text("صنف یازدهم",style: TextStyle(fontSize: 20),),
+                                SizedBox(width: 15,),
+                                CircleAvatar(
+                                  backgroundColor: Color(0xFF0074B7),
+                                  child: Text("#11"),
                                 ),
-                                Icon(Icons.menu_book)
                               ],
                             ),
                           ),
@@ -400,11 +409,13 @@ class _mainpageState extends State<mainpage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text(
-                                  "صنف دوازدهم",
-                                  style: TextStyle(fontSize: 20),
+                                SizedBox(width: 10,),
+                                Text("صنف دوازدهم",style: TextStyle(fontSize: 20),),
+                                SizedBox(width: 15,),
+                                CircleAvatar(
+                                  backgroundColor: Color(0xFF0074B7),
+                                  child: Text("#12"),
                                 ),
-                                Icon(Icons.menu_book)
                               ],
                             ),
                           ),

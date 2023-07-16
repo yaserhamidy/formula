@@ -3,7 +3,7 @@ import 'package:settings_ui/settings_ui.dart';
 main(){
   runApp(
     MaterialApp(
-      theme: ThemeData.dark(),
+
     home: Settings(),
     )
   );
@@ -19,12 +19,13 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.black,title: Text("Settings",style: TextStyle(fontSize: 20),),),
+      appBar: AppBar(backgroundColor: Color(0xff003B73),title: Text("Settings",style: TextStyle(fontSize: 20),),),
 
       body:
 
       Container(
-        color: Colors.black87,
+
+        decoration: BoxDecoration(color: Color(0xff003B73)),
 
         child: Center(
           child: Container(

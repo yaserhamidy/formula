@@ -29,8 +29,8 @@ class _tenState extends State<ten> {
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
+        backgroundColor: Color(0xff003B73),
+        foregroundColor: Colors.white,
 
       ),
       body: Container(
@@ -41,36 +41,39 @@ class _tenState extends State<ten> {
               height: 50,
             ),
             GestureDetector(
-              child: Container(
-                  height: 50,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "ریاضی",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                child: Container(
 
-                        ),
+                    height: 50,
 
-                      ],
+                    child:
 
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "ریاضی",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+
+                          ),
+
+                        ],
+
+                      ),
                     ),
-                  ),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.yellow,
-                      Colors.black,
-                      Colors.yellowAccent
-                    ]),
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  )),
+                    decoration: BoxDecoration(
+
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color(0xff0074B7),
+                    )),
+              ),
               onTap: () {
                 Navigator.push(
                   context,
@@ -82,34 +85,33 @@ class _tenState extends State<ten> {
               height: 20,
             ),
             GestureDetector(
-              child: Container(
-                  height: 50,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "فیزیک",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                child: Container(
+                    height: 50,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "فیزیک",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
 
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.yellow,
-                      Colors.black,
-                      Colors.yellowAccent
-                    ]),
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  )),
+                    decoration: BoxDecoration(
+
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color(0xff0074B7),
+                    )),
+              ),
               onTap: (){
                 Fluttertoast.showToast(
                     msg: "به ویرژن بعدی فعال میشود",
@@ -130,33 +132,32 @@ class _tenState extends State<ten> {
               height: 20,
             ),
             GestureDetector(
-              child: Container(
-                  height: 50,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "کیمیا",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                      ],
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+                child: Container(
+                    height: 50,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "کیمیا",
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.yellow,
-                      Colors.black,
-                      Colors.yellowAccent
-                    ]),
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                  )),
+                    decoration: BoxDecoration(
+
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color(0xff0074B7),
+                    )),
+              ),
               onTap: (){
                 Fluttertoast.showToast(
                     msg: "به ویرژن بعدی فعال میشود",
